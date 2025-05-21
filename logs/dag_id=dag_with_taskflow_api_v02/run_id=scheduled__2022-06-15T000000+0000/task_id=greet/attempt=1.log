@@ -1,0 +1,21 @@
+[2025-05-21T16:04:26.286+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-05-21T16:04:26.386+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_taskflow_api_v02.greet scheduled__2022-06-15T00:00:00+00:00 [queued]>
+[2025-05-21T16:04:26.441+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_taskflow_api_v02.greet scheduled__2022-06-15T00:00:00+00:00 [queued]>
+[2025-05-21T16:04:26.443+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 6
+[2025-05-21T16:04:26.498+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): greet> on 2022-06-15 00:00:00+00:00
+[2025-05-21T16:04:26.512+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2280) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-21T16:04:26.517+0000] {standard_task_runner.py:72} INFO - Started process 2305 to run task
+[2025-05-21T16:04:26.520+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_with_taskflow_api_v02', 'greet', 'scheduled__2022-06-15T00:00:00+00:00', '--job-id', '718', '--raw', '--subdir', 'DAGS_FOLDER/dar_with_taskflow_api.py', '--cfg-path', '/tmp/tmpupygx665']
+[2025-05-21T16:04:26.533+0000] {standard_task_runner.py:105} INFO - Job 718: Subtask greet
+[2025-05-21T16:04:26.762+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_with_taskflow_api_v02.greet scheduled__2022-06-15T00:00:00+00:00 [running]> on host 2032228d86df
+[2025-05-21T16:04:27.053+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='coder2j' AIRFLOW_CTX_DAG_ID='dag_with_taskflow_api_v02' AIRFLOW_CTX_TASK_ID='greet' AIRFLOW_CTX_EXECUTION_DATE='2022-06-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2022-06-15T00:00:00+00:00'
+[2025-05-21T16:04:27.056+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2025-05-21T16:04:27.059+0000] {logging_mixin.py:190} INFO - Hello World! My name is Jerry Fridman and I am 19 years old!
+[2025-05-21T16:04:27.060+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-05-21T16:04:27.122+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2025-05-21T16:04:27.123+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_with_taskflow_api_v02, task_id=greet, run_id=scheduled__2022-06-15T00:00:00+00:00, execution_date=20220615T000000, start_date=20250521T160426, end_date=20250521T160427
+[2025-05-21T16:04:27.251+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-05-21T16:04:27.287+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-21T16:04:27.290+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

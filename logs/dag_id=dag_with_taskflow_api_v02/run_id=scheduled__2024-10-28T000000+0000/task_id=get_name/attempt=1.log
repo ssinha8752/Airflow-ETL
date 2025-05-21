@@ -1,0 +1,20 @@
+[2025-05-21T16:18:50.143+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-05-21T16:18:50.209+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_taskflow_api_v02.get_name scheduled__2024-10-28T00:00:00+00:00 [queued]>
+[2025-05-21T16:18:50.234+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_taskflow_api_v02.get_name scheduled__2024-10-28T00:00:00+00:00 [queued]>
+[2025-05-21T16:18:50.236+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 6
+[2025-05-21T16:18:50.292+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): get_name> on 2024-10-28 00:00:00+00:00
+[2025-05-21T16:18:50.316+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=10181) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-05-21T16:18:50.321+0000] {standard_task_runner.py:72} INFO - Started process 10211 to run task
+[2025-05-21T16:18:50.340+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_with_taskflow_api_v02', 'get_name', 'scheduled__2024-10-28T00:00:00+00:00', '--job-id', '3297', '--raw', '--subdir', 'DAGS_FOLDER/dar_with_taskflow_api.py', '--cfg-path', '/tmp/tmpmuik7hra']
+[2025-05-21T16:18:50.342+0000] {standard_task_runner.py:105} INFO - Job 3297: Subtask get_name
+[2025-05-21T16:18:50.522+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_with_taskflow_api_v02.get_name scheduled__2024-10-28T00:00:00+00:00 [running]> on host 2032228d86df
+[2025-05-21T16:18:50.760+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='coder2j' AIRFLOW_CTX_DAG_ID='dag_with_taskflow_api_v02' AIRFLOW_CTX_TASK_ID='get_name' AIRFLOW_CTX_EXECUTION_DATE='2024-10-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-28T00:00:00+00:00'
+[2025-05-21T16:18:50.762+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2025-05-21T16:18:50.768+0000] {python.py:240} INFO - Done. Returned value was: {'first_name': 'Jerry', 'last_name': 'Fridman'}
+[2025-05-21T16:18:50.872+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2025-05-21T16:18:50.873+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_with_taskflow_api_v02, task_id=get_name, run_id=scheduled__2024-10-28T00:00:00+00:00, execution_date=20241028T000000, start_date=20250521T161850, end_date=20250521T161850
+[2025-05-21T16:18:50.948+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-05-21T16:18:51.001+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-21T16:18:51.013+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
